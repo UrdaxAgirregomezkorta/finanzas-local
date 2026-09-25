@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    -webkit-tap-highlight-color: transparent;
+  }
+  html,
+  body {
+    background: #09090b;
+  }
+  body {
+    @apply font-sans text-zinc-200 antialiased;
+    text-rendering: optimizeLegibility;
+    background-image: radial-gradient(1200px 500px at 70% -10%, rgba(154, 165, 255, 0.06), transparent 60%);
+    background-attachment: fixed;
+  }
+  ::selection {
+    background: rgba(154, 165, 255, 0.28);
+  }
+  :focus-visible {
+    outline: 2px solid rgba(154, 165, 255, 0.7);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+  select option {
+    background: #18181b;
+    color: #e4e4e7;
+  }
+  input[type='date']::-webkit-calendar-picker-indicator {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #3f3f46 transparent;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #27272a;
+    border-radius: 999px;
+    border: 3px solid #09090b;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3f3f46;
+  }
+}
+
+@layer utilities {
+  .num {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum' 1, 'zero' 0;
+  }
+  .bg-stripes {
+    background-image: repeating-linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.16) 0 4px,
+      transparent 4px 8px
+    );
+  }
+}
+
+/* Recharts: sin contorno de foco al hacer clic con ratón */
+.recharts-wrapper *:focus {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+}
