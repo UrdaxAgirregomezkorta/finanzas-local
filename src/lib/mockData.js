@@ -57,10 +57,10 @@ export function generateMockTransactions(now = new Date()) {
     if (r() > 0.6) add('santander', ym, 22, 'BIZUM RECIBIDO DE JON REGALO', 15);
 
     // Traspasos internos desde Santander
-    add('santander', ym, 28, 'TRANSFERENCIA A FAVOR DE LUCIA MARTIN GARCIA KUTXABANK', -1100);
-    add('kutxabank', ym, 28, 'TRANSFERENCIA DE LUCIA MARTIN GARCIA', 1100);
+    add('santander', ym, 28, 'TRANSFERENCIA A FAVOR DE URDAX AGIRREGOMEZKORTA KUTXABANK', -1100);
+    add('kutxabank', ym, 28, 'TRANSFERENCIA DE URDAX AGIRREGOMEZKORTA', 1100);
     add('santander', ym, 28, 'TRASPASO A OPENBANK AHORRO', -400);
-    add('openbank', ym, 29, 'TRANSFERENCIA RECIBIDA LUCIA MARTIN GARCIA', 400);
+    add('openbank', ym, 29, 'TRANSFERENCIA RECIBIDA URDAX AGIRREGOMEZKORTA', 400);
     add('santander', ym, 1, 'TRANSFERENCIA INMEDIATA A REVOLUT', -250);
     add('revolut', ym, 1, 'Top-up by *4821', 250, 'TOPUP');
     add('santander', ym, 15, 'TRANSFERENCIA INMEDIATA A REVOLUT', -250);
@@ -82,8 +82,8 @@ export function generateMockTransactions(now = new Date()) {
     add('openbank', ym, 11 + Math.floor(r() * 8), 'COMPRA LIDL SUPERMERCADOS', -between(22, 48));
     if (r() > 0.4) add('openbank', ym, 16, 'COMPRA AMAZON.ES MARKETPLACE', -between(18, 55));
     if (mi % 2 === 0) {
-      add('openbank', ym, 20, 'TRANSFERENCIA A REVOLUT LUCIA MARTIN', -150);
-      add('revolut', ym, 21, 'Payment from Lucia Martin Garcia', 150, 'TRANSFER');
+      add('openbank', ym, 20, 'TRANSFERENCIA A REVOLUT URDAX AGIRREGOMEZKORTA', -150);
+      add('revolut', ym, 21, 'Payment from Urdax Agirregomezkorta', 150, 'TRANSFER');
     }
 
     // ───────── Revolut: día a día ─────────

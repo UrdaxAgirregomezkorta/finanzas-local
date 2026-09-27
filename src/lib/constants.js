@@ -116,7 +116,7 @@ export const SYSTEM_RULES = {
 };
 
 export const DEFAULT_SETTINGS = {
-  ownerName: 'Lucía Martín',
+  ownerName: 'Urdax Agirregomezkorta',
   antThreshold: 8,
   savingsTargetPct: 20,
   transferWindowDays: 2,

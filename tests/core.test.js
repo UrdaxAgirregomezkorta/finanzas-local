@@ -61,7 +61,7 @@ test('Kutxabank con columnas Cargo/Abono y separador ;', () => {
   const csv = `Kutxabank - Extracto;;;;
 Fecha;Concepto;Fecha valor;Cargo;Abono;Saldo
 02/03/2025;PRESTAMO HIPOTECARIO CUOTA;02/03/2025;742,18;;3.100,00
-28/02/2025;TRANSFERENCIA DE LUCIA MARTIN;28/02/2025;;1.100,00;3.842,18`;
+28/02/2025;TRANSFERENCIA DE URDAX AGIRREGOMEZKORTA;28/02/2025;;1.100,00;3.842,18`;
   const r = rowsToTransactions(textToRows(csv), {});
   assert.equal(r.bank.bankId, 'kutxabank');
   assert.deepEqual(r.transactions.map((t) => t.amount), [-742.18, 1100]);
